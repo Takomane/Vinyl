@@ -16,7 +16,13 @@ function App() {
 
   return(
     <div>
-
+        {(typeof data.Vinyl === 'undefined') ? (
+          <p>Loading...</p>
+        ) : (
+          data.Vinyl.map((Vinyl, i) => (
+            <p key={i}>{Vinyl}</p>
+          ))
+        )}
     </div>
   )
 }
