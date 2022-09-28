@@ -14,3 +14,5 @@ export default defineConfig({
   },
   plugins: [react()]
 })
+
+// http://localhost:5000/api/vinyl is now fetch('/api/vinyl')

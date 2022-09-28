@@ -3,28 +3,14 @@ import React, { useState, useEffect } from 'react'
 function App() {
   const [data, setData] = useState([{}])
 
-  useEffect(() => {
-    fetch("/Vinyl").then(
-      res => res.json()
-    ).then(
-      data => {
-        setData(data)
-        console.log(data)
-      }
-    )
-  }, [])
+useEffect(() => {
+  const fetchData = async () => {
+    const data = await fetch('http://localhost:5000/api/vinyl')
+  }
 
-  return(
-    <div>
-        {(typeof data.Vinyl === 'undefined') ? (
-          <p>Loading...</p>
-        ) : (
-          data.Vinyl.map((Vinyl, i) => (
-            <p key={i}>{Vinyl}</p>
-          ))
-        )}
-    </div>
-  )
-}
+fetchData()
+  .catch(console.error);
+}, 
+[])}
 
 export default App

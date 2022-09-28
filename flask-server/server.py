@@ -4,7 +4,7 @@ from flask_cors import CORS
 app = Flask(__name__)
 CORS(app)
 
-@app.route("/vinyl")
+@app.route("/api/vinyl")
 def vinyl():
     return {"vinyl": ["Run The Jewels 1", "CTRL", "Pretty Girls Like Trap Music"]}
 
