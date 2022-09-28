@@ -1,4 +1,3 @@
-import py_compile
 from flask import Flask
 from flask_cors import CORS
 
