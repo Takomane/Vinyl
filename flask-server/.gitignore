@@ -1,5 +1,5 @@
 *.local
-venv
+venv/Lib/site-packages
 
 # Editor directories and files
 .vscode/*
