@@ -2,7 +2,7 @@
 
 The purpose of this app is for me to catalog the large vinyl collection I own.
 
-This app uses Flask framework for Python and Vite for Javascript.
+This app uses Flask framework for Python, Vite for Javascript, and SupaBase for a database.
 
 Be sure to install do the following when installing
 npm install Vite
