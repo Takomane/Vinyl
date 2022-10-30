@@ -1,5 +1,6 @@
 from flask import Flask
 from flask_cors import CORS
+from supa.py import API_KEY , API_URL
 
 app = Flask(__name__)
 CORS(app)
