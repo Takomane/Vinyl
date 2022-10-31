@@ -1,13 +1,23 @@
-from flask import Flask
+from flask import Flask, jsonify
 from flask_cors import CORS
-from supa.py import API_KEY , API_URL
+from supa import Vinyl
 
 app = Flask(__name__)
 CORS(app)
 
-@app.route("/api/vinyl")
-def vinyl():
-    return {"vinyl": ["Run The Jewels 1", "CTRL", "Pretty Girls Like Trap Music"]}
+@app.route("/vinyl")
+def Vinyl():
+    return jsonify({
+        'Vinyl': Vinyl,
+    })
+
+@app.route('/Vinyl/<Vinyl_id>')
+def find_Vinyl_by_id(Vinyl_id):
+    for Vinyl in Vinyl:
+        if Vinyl["id"] == int(Vinyl_id):
+            return jsonify({
+                "Vinyl":Vinyl,
+            })
 
 if __name__ == "__main__":
     app.run(debug=True)
