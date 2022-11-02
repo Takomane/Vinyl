@@ -1,6 +1,6 @@
 from flask import Flask, jsonify
 from flask_cors import CORS
-from supabase import Vinyl
+from keys import Vinyl
 
 app = Flask(__name__)
 CORS(app)
