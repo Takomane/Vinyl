@@ -5,13 +5,14 @@ function App() {
 
 useEffect(() => {
   const getData = async () => {
-    const request = await fetch('/api/vinyl');
+    const request = await fetch('http://localhost:5000/Albums');
     const response = await request.json();
+    console.log(response)
     return response;
   }
 
-  try {
-    setData(getData());
+  try {getData()
+   setData(getData());
   } catch (err){
     console.log(err);
   }
@@ -19,16 +20,10 @@ useEffect(() => {
 }, [])
 
   return(
-    <div>
-      {(typeof data.vinyl === 'undefined') ? (
-        <p>Loading...</p>
-      ) : (
-        data.vinyl.map((vinyl, i) => (
-          <p key={i}>{vinyl}</p>
-        ))
-      )}
-    </div>
+   <div>
+
+  </div>
   )
-        }
+      }
 
 export default App
