@@ -1,6 +1,6 @@
 *.local
 venv/Lib/site-packages
-supa.py
+supabase.py
 
 # Editor directories and files
 .vscode/*
