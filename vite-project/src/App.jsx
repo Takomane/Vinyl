@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react'
+import AlbumCard from AlbumCard.js
 
 function App() {
   const [albums, data, setData] = useState([{}])
@@ -22,7 +23,7 @@ useEffect(() => {
   return(
 <div className="App">
   {albums.map(albums => {
-  return <pre>{JSON.stringify(albums)}</pre>
+  return <p>{albums.artist}</p>
 })}
   </div>
   )
