@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 
 function App() {
-  const [data, setData] = useState([{}])
+  const [albums, data, setData] = useState([{}])
 
 useEffect(() => {
   const getData = async () => {
@@ -20,9 +20,9 @@ useEffect(() => {
 }, [])
 
   return(
-  <div className="App">
-{data.map(data => {
-  return <pre>{JSON.stringify(data)}</pre>
+<div className="App">
+  {albums.map(albums => {
+  return <pre>{JSON.stringify(albums)}</pre>
 })}
   </div>
   )
