@@ -20,8 +20,10 @@ useEffect(() => {
 }, [])
 
   return(
-   <div>
-
+  <div className="App">
+{data.map(data => {
+  return <pre>{JSON.stringify(data)}</pre>
+})}
   </div>
   )
       }
