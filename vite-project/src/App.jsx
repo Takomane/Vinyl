@@ -1,32 +1,29 @@
 import React, { useState, useEffect } from 'react'
-import AlbumCard from AlbumCard.js
 
 function App() {
-  const [albums, data, setData] = useState([{}])
+  const [data, setData] = useState()
 
 useEffect(() => {
-  const getData = async () => {
-    const request = await fetch('http://localhost:5000/Albums');
-    const response = await request.json();
-    console.log(response)
-    return response;
-  }
-
-  try {getData()
-   setData(getData());
-  } catch (err){
-    console.log(err);
-  }
-
+  fetch('http://localhost:5000/Albums').then(response => response.json()).then(res => setData(res));
 }, [])
 
-  return(
+useEffect(() => {
+console.log(data);
+}, [data])
+
+return(
 <div className="App">
-  {albums.map(albums => {
-  return <p>{albums.artist}</p>
-})}
-  </div>
-  )
-      }
+  {
+ data !== undefined ? data.data.map(item => {
+ return ( <li key={item.Title}>
+{item.Title}
+{item.Artist}
+{item.Genre}
+  </li>
+   )
+ }) : null
+  }
+</div>
+  )}
 
 export default App

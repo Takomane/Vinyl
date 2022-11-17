@@ -8,7 +8,7 @@ CORS(app)
 
 @app.route("/Albums")
 def Albums():
-   return jsonify (find_all_Albums(), 200)
+   return (find_all_Albums())
 
 @app.route('/Albums/<Albums_id>')
 def find_Albums_by_id(Albums_id):
