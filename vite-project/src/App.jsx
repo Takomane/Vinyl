@@ -15,11 +15,11 @@ return(
 <div className="App">
   {
  data !== undefined ? data.data.map(item => {
- return ( <li key={item.Title}>
-{item.Title}
-{item.Artist}
-{item.Genre}
-  </li>
+ return ( <div className="cards" key={item.Title}>
+<h1>Title: {item.Title} </h1>
+<h2>Artist: {item.Artist} </h2>
+<h2> Genre: {item.Genre} </h2>
+  </div>
    )
  }) : null
   }
