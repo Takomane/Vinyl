@@ -14,13 +14,14 @@ console.log(data);
 
 return(
 <div className="App">
+  <h1 className="albumsowned">💽Albums Owned💽</h1>
   <Stylesheets />
   {
  data !== undefined ? data.data.map(item => {
  return ( <div className="primary" key={item.Title}>
-<h1> Title: {item.Title} </h1>
-<h2> Artist: {item.Artist} </h2>
-<h2> Genre: {item.Genre} </h2>
+<h2> Title: {item.Title} </h2>
+<h3> Artist: {item.Artist} </h3>
+<h3> Genre: {item.Genre} </h3>
   </div>
    )
  }) : null

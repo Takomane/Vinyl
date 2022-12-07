@@ -7,9 +7,11 @@
   font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
 }
 
-.html {
-  background-color: #36454F;
-}
 .primary {
+  color: whitesmoke;
+  border-style: solid;
+}
+
+.albumsowned {
   color: whitesmoke;
 }
