@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react'
+import Stylesheets from './Stylesheet';
 
 function App() {
   const [data, setData] = useState()
@@ -13,11 +14,12 @@ console.log(data);
 
 return(
 <div className="App">
+  <Stylesheets />
   {
  data !== undefined ? data.data.map(item => {
- return ( <div className="cards" key={item.Title}>
-<h1>Title: {item.Title} </h1>
-<h2>Artist: {item.Artist} </h2>
+ return ( <div className="primary" key={item.Title}>
+<h1> Title: {item.Title} </h1>
+<h2> Artist: {item.Artist} </h2>
 <h2> Genre: {item.Genre} </h2>
   </div>
    )
