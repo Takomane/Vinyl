@@ -1,5 +1,4 @@
-from flask import Flask, jsonify
-import json
+from flask import Flask, jsonify, request
 from flask_cors import CORS
 from keys import find_all_Albums
 
@@ -17,6 +16,16 @@ def find_Albums_by_id(Albums_id):
             return jsonify({
                 "Albums":Albums,
             })
+
+# @app.route('/Albums/<Albums_id>')
+# def add_albums():
+    # if request.method == 'POST':
+       #  data = request.form.to_dict()
+      #   print(data)
+      #   cur.execute("INSERT INTO Albums (Title, Artist, Genre) VALUES (%s, %s, %s)"
+      #   (f"{data['Title']}", f"{data['Artist']}", f"{data['Genre']}"))
+ #    con.commit()
+  #   return 'Form Submitted'
 
 if __name__ == "__main__":
     app.run(debug=True)
