@@ -8,6 +8,12 @@ CORS(app)
 
 @app.route("/Albums")
 def Albums():
+        if request.method == 'POST':
+         data = request.form.to_dict()
+         print(data)
+         ("INSERT INTO Albums (Title, Artist, Genre) VALUES (%s, %s, %s)"
+         (f"{data['Title']}", f"{data['Artist']}", f"{data['Genre']}"))
+     return 'Saved')
    return (find_all_Albums())
 
 @app.route('/Albums/<Albums_id>')
