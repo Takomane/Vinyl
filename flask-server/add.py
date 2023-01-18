@@ -2,7 +2,7 @@ from flask import Flask, render_template, request, redirect, url_for
 
 app = Flask("_name__")
 
-forData = {}
+formData = {}
 
 @app.route("/add", methods = ['Post', 'Get'])
 def add():
