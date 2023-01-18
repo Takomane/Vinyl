@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import Stylesheets from './Stylesheet';
 
-function add()
+function post_album()
     
-export default add
+export default post_album
