@@ -6,21 +6,21 @@ function post_album()
     const onSubmit =(d) =>
     alert(JSON.stringify(d));
 
-    return (
-        <form onSubmit={handleSubmit(onSubmit)}>
-            <label>
+     return (
+         <form onSubmit={handleSubmit(onSubmit)}>
+             <label>
                 Album Name:
-            <input {...register("item.Title")} />
+             <input {...register("item.Title")} />
             </label>
-            <label>
-                Artist Name:
-            <input {...register("item.Artist")} />
-            </label>
-            <label>
+             <label>
+                 Artist Name:
+             <input {...register("item.Artist")} />
+             </label>
+             <label>
                 Genre:
             <input {...register("item.Genre")} />
             </label>
-            <p>Render: </p>
+             <p>Render: </p>
         </form>
-    )
-export default post_album
+     )
+ export default post_album
