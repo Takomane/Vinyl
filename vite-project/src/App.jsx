@@ -1,5 +1,6 @@
-import React, { useState, useEffect, useForm } from 'react'
+import React, { useState, useEffect} from 'react'
 import Stylesheets from './Stylesheet';
+import post_album from './add'
 
 function App() {
   const [data, setData] = useState()
@@ -28,27 +29,5 @@ return(
   }
 </div>
   )}
-
-  function post_album()
-  const {register, handleSubmit} = useForm();
-  const onSubmit = (d) =>
-  alert(JSON.stringify(d));
-
-   return (
-       <form onSubmit={handleSubmit(onSubmit)}>
-           <label>
-              Album Name:
-           <input {...register("item.Title")} />
-          </label>
-           <label>
-               Artist Name:
-           <input {...register("item.Artist")} />
-           </label>
-           <label>
-              Genre:
-          <input {...register("item.Genre")} />
-          </label>
-           <p>Render: </p>
-      </form>
-   )
-export {App, post_album}
+<post_album />
+export default App
