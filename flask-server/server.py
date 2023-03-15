@@ -23,7 +23,7 @@ def add_albums():
      if request.method == 'POST':
          data = request.form.to_dict()
          print(data)
-         ("INSERT INTO Albums (Title, Artist, Genre) VALUES (%s, %s, %s)"
+         ("INSERT INTO Albums (Title, Artist, Genre) VALUES (%f, %f, %f)"
          (f"{data['Title']}", f"{data['Artist']}", f"{data['Genre']}"))
      return 'Saved'
 

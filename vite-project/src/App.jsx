@@ -31,7 +31,7 @@ return(
 
   function post_album()
   const {register, handleSubmit} = useForm();
-  const onSubmit =(d) =>
+  const onSubmit = (d) =>
   alert(JSON.stringify(d));
 
    return (
