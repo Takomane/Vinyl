@@ -1,6 +1,6 @@
 import React, { useState, useEffect} from 'react'
-import Stylesheets from './Stylesheet';
-import post_album from './add'
+import Stylesheets from './Stylesheet'
+import Add from './Add';
 
 function App() {
   const [data, setData] = useState()
@@ -27,7 +27,7 @@ return(
    )
  }) : null
   }
+<Add/>
 </div>
   )}
-<post_album />
 export default App

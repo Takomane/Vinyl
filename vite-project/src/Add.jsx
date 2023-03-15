@@ -1,8 +1,9 @@
-import React, { useState, useEffect, useForm } from 'react'
+import React, { useState, useEffect } from 'react'
+import {useForm} from 'react-hook-form'
 import Stylesheets from './Stylesheet';
 
-function post_album()
-    const {register, handleSubmit} = useForm();
+export default function Add(){
+    const { register, handleSubmit } = useForm();
     const onSubmit =(d) =>
     alert(JSON.stringify(d));
 
@@ -20,7 +21,6 @@ function post_album()
                 Genre:
             <input {...register("item.Genre")} />
             </label>
-             <p>Render: </p>
+            <input type="submit"></input>
         </form>
-     )
- export default post_album
+     )}
