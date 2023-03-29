@@ -1,0 +1,9 @@
+{
+  "extends": [
+    "vite-plugin",
+    "vite-plugin/jest",
+    "react-app",
+    "react-app/jest",
+    "prettier"
+  ]
+}
