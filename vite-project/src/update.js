@@ -1,5 +1,6 @@
 import React, { useEffect } from "react";
 
+
 useEffect(() => {
     post("http://localhost:5000/Albums")
       .then((response) => response.json())
@@ -13,7 +14,7 @@ useEffect(() => {
     // 'Content-Type': 'application/x-www-form-urlencoded',
   },
   body: JSON.stringify(), 
-  bortController
+  abortController
 
 
   // method: "POST", // *GET, POST, PUT, DELETE, etc.
