@@ -1,18 +1,17 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 
 export default function Update(){
+const [data, setData] = useState()
 useEffect(() => {
-    post("http://localhost:5000/Albums")
-      .then((response) => response.json())
-      .then((res) => setData(res));
-  }, [])};
+  fetch("http://localhost:5000/Albums/add", {
+    method: 'POST' , 
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(), 
+  })
+   .then((response) => response.json())
+   .then((res) => setData(res));
+}, [])
 
-  const response = await fetch(url, 
-  method, 'POST' , {
-  headers: {
-    "Content-Type": "application/json",
-  },
-  body: JSON.stringify(), 
-  abortController
-
-})
+};

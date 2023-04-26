@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import Stylesheets from "./Stylesheet";
 import Add from "./Add";
+import Update from "./update";
 
 function App() {
   const [data, setData] = useState();
@@ -31,6 +32,7 @@ function App() {
           })
         : null}
       <Add />
+      <Update />
     </div>
   );
 }
