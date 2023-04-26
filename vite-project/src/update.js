@@ -7,12 +7,15 @@ useEffect(() => {
       .then((res) => setData(res));
   }, []);
 
-  const response = await fetch(url, {
+  const response = await fetch(url, 
+  method, 'POST' , {
   headers: {
     "Content-Type": "application/json",
     // 'Content-Type': 'application/x-www-form-urlencoded',
-  },AbortController
+  },
+  body: JSON.stringify(), 
+  bortController
 
 
-  method: "POST", // *GET, POST, PUT, DELETE, etc.
+  // method: "POST", // *GET, POST, PUT, DELETE, etc.
 })
