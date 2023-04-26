@@ -12,4 +12,4 @@ useEffect(() => {
 
 
   method: "POST", // *GET, POST, PUT, DELETE, etc.
-}
+})
