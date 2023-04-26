@@ -1,6 +1,5 @@
 import React, { useEffect } from "react";
 
-
 useEffect(() => {
     post("http://localhost:5000/Albums")
       .then((response) => response.json())
