@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from "react";
 
 export default function Update(){
-const [data, setData] = useState()
+const [data, setData] = useState('');
+const [newData, setNewData] = useState('');
 useEffect(() => {
   fetch("http://localhost:5000/Albums/add", {
     method: 'POST' , 
@@ -12,6 +13,6 @@ useEffect(() => {
   })
    .then((response) => response.json())
    .then((res) => setData(res));
-}, [])
+}, [data, newData])
 
 };
