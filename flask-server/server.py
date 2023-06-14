@@ -1,18 +1,10 @@
 from flask import Flask, jsonify, request
 from flask_cors import CORS
 
-from keys import find_all_Albums
+from keys import find_all_Albums, insert_album
 
 app = Flask(__name__)
 CORS(app)
-
-def insert_album(title, artist, genre):
-    data = {
-        'Title': title,
-        'Artist': artist,
-        'Genre': genre
-    }
-    supabase.table('Albums').insert([data]).execute()
 
 @app.route("/Albums")
 def Albums():
