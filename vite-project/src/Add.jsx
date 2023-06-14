@@ -5,7 +5,20 @@ import Stylesheets from "./Stylesheet";
 export default function Add() {
   const { register, handleSubmit } = useForm();
   const [data, setData] = useState("");
-  console.log(data)
+  
+  useEffect(() => {
+    if (data) {
+    fetch("http://localhost:5000/Albums/add", {
+      method: 'POST' , 
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(data), 
+    })
+     .then((response) => response.json())
+     .then((res) => setData(res))
+     .catch((error) => console.error(error));
+  } }, [data])
 
   return (
     <form onSubmit={handleSubmit((data) => {setData(JSON.stringify(data))})}>

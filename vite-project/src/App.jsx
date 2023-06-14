@@ -32,7 +32,6 @@ function App() {
           })
         : null}
       <Add />
-      <Update />
     </div>
   );
 }

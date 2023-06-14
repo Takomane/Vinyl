@@ -1,5 +1,5 @@
-from flask import Flask, jsonify, request
-from flask_cors import CORS
+from flask import Flask, request
+from flask_cors import CORS, cross_origin
 
 from keys import find_all_Albums, insert_album
 
@@ -10,12 +10,13 @@ CORS(app)
 def Albums():
    return (find_all_Albums())
 
-@app.route('/Albums/add', methods=['GET', 'POST'])
+@app.route('/Albums/add', methods=['POST'])
+@cross_origin()
 def add_albums():
      if request.method == 'POST':
-         data = request.form.to_dict()
-         print(data)
-         insert_album(data['Title'], data['Artist'], data['Genre'])
+        print(request.form.to_dict())
+        data = request.form.to_dict()
+        insert_album(data['item.Title'], data['item.Artist'], data['item.Genre'])
      return 'Saved'
 
 if __name__ == "__main__":

@@ -17,4 +17,5 @@ useEffect(() => {
    .catch((error) => console.error(error));
 } [newData]});
 
+return A()
 };
