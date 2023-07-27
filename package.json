@@ -1,5 +1,6 @@
 {
   "dependencies": {
+    "cors": "^2.8.5",
     "react-hook-form": "^7.43.1"
   }
 }
