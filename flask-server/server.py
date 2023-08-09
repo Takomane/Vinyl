@@ -4,7 +4,7 @@ from flask_cors import CORS, cross_origin
 from keys import find_all_Albums, insert_album
 
 app = Flask(__name__)
-CORS(app)
+CORS(app, resources={r"/*": {"origins": "*"}})
 
 @app.route("/Albums")
 def Albums():
