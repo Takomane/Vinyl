@@ -3,19 +3,6 @@ import Stylesheets from "./Stylesheet";
 import Add from "./Add";
 import Update from "./update";
 
-const express = import('express');
-const cors = import('cors');
-const app = express();
-
-// Allow requests from all origins (for development)
-app.use(cors());
-
-// Your routes and other middleware here
-
-app.listen(5000, () => {
-  console.log('Server is running on port 5000');
-});
-
 function App() {
   const [data, setData] = useState();
 
