@@ -1,17 +1,16 @@
 from flask import Flask, request
-from flask_cors import CORS, cross_origin
+from flask_cors import CORS
 
 from keys import find_all_Albums, insert_album
 
 app = Flask(__name__)
-CORS(app, resources={r"/*": {"origins": "*"}})
+CORS(app)
 
 @app.route("/Albums")
 def Albums():
    return (find_all_Albums())
 
 @app.route('/Albums/add', methods=['POST'])
-@cross_origin()
 def add_albums():
      if request.method == 'POST':
         print(request.form.to_dict())
